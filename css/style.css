@@ -36,7 +36,6 @@ button {
 }
 
 body {
-  overflow-x: hidden;
   min-height: 100vh;
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
@@ -111,10 +110,16 @@ object {
 
 /* baisc */
 
+html, body {
+  position:relative;
+  overflow-x: hidden;
+}
+
 body {
   font-family: 'Gilroy';
-  background-color: #121212;
   color: #fff;
+  background: url(../img/bg.png) center center #121212;
+  background-size: cover;
 }
 
 a {
@@ -128,11 +133,11 @@ a {
 }
 
 .hidden {
-  overflow: hidden;
+  overflow: hidden !important;
 }
 
 .hidden .content {
-  filter: blur(3px);
+  filter: blur(3px) !important;
 }
 
 .mask {
@@ -1174,14 +1179,18 @@ ul.calendar-filter__list {
 
 .calendar-months__block {
   width: calc(100% / 12 * 3 - 20px);
-  margin: 10px;
   padding: 10px;
+  margin-bottom: 20px;
   border: 2px solid #303030;
   border-radius: 5px;
   background-color: rgba(28, 28, 28, 0.5);
   /* text */
   font-family: 'Gilroy Bold';
   transition: .3s ease-in-out;
+}
+
+.calendar-months__block:not(:nth-child(4n)){
+  margin-right: 20px;
 }
 
 .calendar-months__block:hover {
@@ -1192,6 +1201,10 @@ ul.calendar-filter__list {
 @media screen and (max-width: 920px) {
   .calendar-months__block {
     width: calc(100% / 12 * 4 - 20px);
+    margin-right: 0 !important;
+  }
+  .calendar-months__block:not(:nth-child(3n)){
+    margin-right: 20px;
   }
 }
 
@@ -1200,6 +1213,7 @@ ul.calendar-filter__list {
     width: calc(100% / 12 * 6 - 20px);
     min-height: 150px;
   }
+  
 }
 
 @media screen and (max-width: 576px) {
@@ -1481,6 +1495,14 @@ ul.calendar-filter__list {
   margin: 20px;
 }
 
+.new__block:nth-child(3n) {
+  margin-right: 0;
+}
+
+.new__header {
+  margin-right: 0;
+}
+
 .new__block {
   width: calc(100% / 12 * 4 - 40px);
 }
@@ -1489,6 +1511,11 @@ ul.calendar-filter__list {
   .new__block {
     width: calc(100% / 12 * 6 - 40px);
   }
+  
+  .new__block:nth-child(2n) {
+    margin-right: 0;
+  }
+  
 }
 
 @media screen  and (max-width: 576px){
@@ -1497,5 +1524,98 @@ ul.calendar-filter__list {
   }
   .new__block {
     width: calc(100% / 12 * 12);
+  }
+}
+
+/* modal login */
+
+.modal-login{
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  text-align: center;
+  transition: all .6s ease-in-out;
+  background-color: rgba(8, 8, 8, 0.7);
+}
+
+.modal-login form {
+  position: relative;
+}
+
+.modal-login__cross {
+  position: absolute;
+  z-index: 999;
+  right: -30px;
+  top: -30px;
+  cursor: pointer;
+}
+
+.modal-login__cross:hover{
+  transform: scale(1.2);
+}
+
+.modal-login__input {
+  outline: none;
+  display: block;
+  margin: 20px auto;
+  padding: 20px 50px;
+  border: 0;
+  background-color: rgba(28, 28, 28, 0.5);
+  border-radius: 5px;
+  /* text */
+  color: #fff;
+}
+
+.modal-login__input::placeholder {
+  color: #6D6D6D;
+}
+
+.modal-login input, .modal-login .btn {
+  width: 100%;
+  max-width: 470px;
+}
+
+/* footer */
+
+.footer {
+  font-family: 'Gilroy';
+  padding: 20px 0;
+  margin-top: 200px;
+}
+
+.footer__wrap {
+  align-items: center;
+}
+
+.footer__privacy {
+  font-size: 18px;
+  line-height: 16px;
+  color: #3C3C3C;
+}
+
+.footer .developer-text{
+  font-size: 16px;
+  line-height: 16px;
+  color: #3C3C3C;
+}
+
+.developer-text:first-child {
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 576px) {
+  .footer {
+    margin-top: 100px;
+  }
+  .footer__privacy {
+    margin-bottom: 20px;
+  }
+  .footer__wrap {
+    display: block;
+    text-align: center;
   }
 }

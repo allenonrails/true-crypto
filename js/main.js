@@ -1,3 +1,21 @@
+// login modal
+
+function loginModal(){
+  document.querySelector('.navbar__login').addEventListener('click', function(){
+    let modal = document.querySelector('.modal-login');
+
+    document.querySelector('body').classList.add('hidden')
+    modal.style.display = 'flex'
+    
+    modal.querySelector('.modal-login__cross').addEventListener('click', function(){
+      modal.style.display = 'none'
+      document.querySelector('body').classList.remove('hidden')
+    })
+  })
+}
+
+loginModal()
+
 // burger menu animation and appearance
 
 function burgerToggleAnimation(){
