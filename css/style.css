@@ -1530,16 +1530,14 @@ ul.calendar-filter__list {
 /* modal login */
 
 .modal-login{
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  display: none;
+  position: relative;
+  height: 100vh;
+  display: flex;
   justify-content: center;
   align-items: center;
   z-index: 999;
   text-align: center;
   transition: all .6s ease-in-out;
-  background-color: rgba(8, 8, 8, 0.7);
 }
 
 .modal-login form {
