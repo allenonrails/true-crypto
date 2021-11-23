@@ -1179,6 +1179,7 @@ ul.calendar-filter__list {
 
 .calendar__months {
   justify-content: start;
+  align-content: start;
 }
 
 .calendar-months__block {
