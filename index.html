@@ -43,7 +43,7 @@
           </div>
         </ul>
         <div class="navbar__block">
-          <a href="javascript:void(0);" class="navbar__login">
+          <a href="#" class="navbar__login">
             Вход
           </a>
           <div class="burger">
@@ -54,148 +54,60 @@
         </div>
       </div>
       <ul class="navbar-logined">
-        <li class="navbar__item"><a href="#" class="navbar__link">
+        <li class="active-page navbar__item"><a href="#" class="navbar__link">
           Статьи
         </a></li>
-        <li class="active-page navbar__item"><a href="#" class="navbar__link">
+        <li class="navbar__item"><a href="#" class="navbar__link">
           Календарь
         </a></li>
-        <li class="navbar__item"><a href="#" class="navbar__link">
+        <li class="active-page navbar__item"><a href="#" class="navbar__link">
           Боты
         </a></li>
-        <div class="navbar__nav">
-          <a href="#" class="navbar__personal">Личный кабинет</a>
-          <a href="#" class="navbar__exit">Выход</a>
-        </div>
       </ul>
     </div>
   </navbar>
+
   <div class="content">
-    <section class="calendar">
+    <section class="articles">
       <div class="container">
-        <div class="calendar__wrap">
-          <button class="calendar__btn calendar__filter-btn slider-btn btn">Фильтры</button>
-          <div class="calendar__buttons row">
-            <button class="calendar__btn calendar__prev slider-btn btn slider-btn-left">
-              <object type="image/svg+xml" data="./img/prev.svg"></object>
-              Назад
-            </button>
-            <button class="calendar__btn calendar__days-btn slider-btn btn">
-              Переключение между днями
-              <a href="" class="calendar__btn-link">
-                <object class="calendar-prev" type="image/svg+xml" data="./img/prev.svg"></object>
-              </a>
-              <a href="" class="calendar__btn-link">
-                <object type="image/svg+xml" data="./img/next.svg"></object>
-              </a>
-            </button>
+        <h1 class="title articles__maintitle">Статьи</h1>
+        <div class="articles__search">
+          <div class="search">
+            <button class="search__btn"><object type="image/svg+xml" data="./img/loop.svg"></object></button>
+            <input placeholder="Поиск" type="text" class="search__text">
           </div>
-          <div class="calendar__filter-block calendar-filter">
-            <svg class="filter-modal-cross" width="30" height="30" viewBox="0 0 149 149" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <g filter="url(#filter0_i_144_30)">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M128.759 148.881L148.384 129.257L94.0912 74.8175L148.522 20.4605L128.884 0.849448L74.4935 55.1668L20.1865 0.712891L0.562203 20.3372L54.8559 74.7778L0.426758 129.134L20.0643 148.745L74.4537 94.4285L128.759 148.881Z" fill="#4F4F4F"/>
-              </g>
-              <defs>
-              <filter id="filter0_i_144_30" x="0.426758" y="0.712891" width="148.095" height="152.168" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-              <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-              <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-              <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-              <feOffset dy="4"/>
-              <feGaussianBlur stdDeviation="4"/>
-              <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
-              <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.65 0"/>
-              <feBlend mode="normal" in2="shape" result="effect1_innerShadow_144_30"/>
-              </filter>
-              </defs>
-              </svg>
-            <h3 class="calendar-filter__months-block">
-              <a href="#" class="calendar__btn-link">
-                <object class="calendar-prev" type="image/svg+xml" data="./img/prev.svg"></object>
-              </a>
-              Сентябрь
-              <a href="#" class="calendar__btn-link">
-                <object type="image/svg+xml" data="./img/next.svg"></object>
-              </a>
-            </h3>
-            <ul class="calendar-filter__list filter-list">
-              <h3 class="filter-list__title">Актуальность (<span>2</span>)</h3>
-              <li class="filter-list__item">
-                <input type="checkbox" class="filter-list__input">
-                <div class="checkbox-item"></div>
-                <label for="" class="filter-list__label">Включить</label>
-              </li>
-            </ul>
-            <ul class="calendar-filter__list filter-list">
-              <h3 class="filter-list__title">Теги (<span>2</span>)</h3>
-              <li class="filter-list__item">
-                <input type="checkbox" checked='' class="filter-list__input">
-                <div class="checkbox-item"></div>
-                <label for="" class="filter-list__label">NFT</label>
-              </li>
-              <li class="filter-list__item">
-                <input type="checkbox" checked='' class="filter-list__input">
-                <div class="checkbox-item"></div>
-                <label for="" class="filter-list__label">Абуз</label>
-              </li>
-              <li class="filter-list__item">
-                <input type="checkbox" checked='' class="filter-list__input">
-                <div class="checkbox-item"></div>
-                <label for="" class="filter-list__label">AirDrop</label>
-              </li>
-              <li class="filter-list__item">
-                <input type="checkbox" checked='' class="filter-list__input">
-                <div class="checkbox-item"></div>
-                <label for="" class="filter-list__label">Staking</label>
-              </li>
-              <li class="filter-list__item">
-                <input type="checkbox" checked='' class="filter-list__input">
-                <div class="checkbox-item"></div>
-                <label for="" class="filter-list__label">Play2Earn</label>
-              </li>
-              <li class="filter-list__item">
-                <input type="checkbox" checked='' class="filter-list__input">
-                <div class="checkbox-item"></div>
-                <label for="" class="filter-list__label">WAX</label>
-              </li>
-              <li class="filter-list__item">
-                <input type="checkbox" checked='' class="filter-list__input">
-                <div class="checkbox-item"></div>
-                <label for="" class="filter-list__label">BSC</label>
-              </li>
-              <li class="filter-list__item">
-                <input type="checkbox" checked='' class="filter-list__input">
-                <div class="checkbox-item"></div>
-                <label for="" class="filter-list__label">ETH</label>
-              </li>
-              <li class="filter-list__item">
-                <input type="checkbox" checked='' class="filter-list__input">
-                <div class="checkbox-item"></div>
-                <label for="" class="filter-list__label">SOL</label>
-              </li>
-              <li class="filter-list__item">
-                <input type="checkbox" checked='' class="filter-list__input">
-                <div class="checkbox-item"></div>
-                <label for="" class="filter-list__label">AVAX</label>
-              </li>
-              <li class="filter-list__item">
-                <input type="checkbox" checked='' class="filter-list__input">
-                <div class="checkbox-item"></div>
-                <label for="" class="filter-list__label">MATIC</label>
-              </li>
-            </ul>
-            <ul class="calendar-filter__list filter-list">
-              <h3 class="filter-list__title">KYC (<span>2</span>)</h3>
-              <li class="filter-list__item">
-                <input type="checkbox" checked='' class="filter-list__input">
-                <div class="checkbox-item"></div>
-                <label for="" class="filter-list__label">Включить</label>
-              </li>
-            </ul>
-            <button class="calendar-filter__btn btn btn-orange">Сбросить</button>
-          </div>
-          <div class="calendar__months calendar__days calendar-months row">
-            <a href="#" class="calendar-months__block calendar-green">1 ноября</a><a href="#" class="calendar-months__block calendar-green">2 ноября</a><a href="#" class="calendar-months__block calendar-green">3 ноября</a><a href="#" class="calendar-months__block calendar-green">4 ноября</a><a href="#" class="calendar-months__block calendar-green">5 ноября</a><a href="#" class="calendar-months__block calendar-green">6 ноября</a><a href="#" class="calendar-months__block calendar-green">7 ноября</a><a href="#" class="calendar-months__block calendar-green">8 ноября</a>
-          </div>
+        </div>
+        <div class="articles__wrap row">
+          <a href="" class="articles__block">
+            <span class="articles__image"><img src="./img/img.jpg" alt="article 1 image"></span>
+            <h3 class="articles__title subtitle">Приветствие</h3>
+            <p class="articles__date text">15 сентября 2021 г.</p>
+          </a>
+          <a href="" class="articles__block">
+            <span class="articles__image"><img src="./img/img.jpg" alt="article 2 image"></span>
+            <h3 class="articles__title subtitle">Приветствие</h3>
+            <p class="articles__date text">15 сентября 2021 г.</p>
+          </a>
+          <a href="" class="articles__block">
+            <span class="articles__image"><img src="./img/img.jpg" alt="article 3 image"></span>
+            <h3 class="articles__title subtitle">Приветствие</h3>
+            <p class="articles__date text">15 сентября 2021 г.</p>
+          </a>
+          <a href="" class="articles__block">
+            <span class="articles__image"><img src="./img/img.jpg" alt="article 4 image"></span>
+            <h3 class="articles__title subtitle">Приветствие</h3>
+            <p class="articles__date text">15 сентября 2021 г.</p>
+          </a>
+          <a href="" class="articles__block">
+            <span class="articles__image"><img src="./img/img.jpg" alt="article 5 image"></span>
+            <h3 class="articles__title subtitle">Приветствие</h3>
+            <p class="articles__date text">15 сентября 2021 г.</p>
+          </a>
+          <a href="" class="articles__block">
+            <span class="articles__image"><img src="./img/img.jpg" alt="article 6 image"></span>
+            <h3 class="articles__title subtitle">Приветствие</h3>
+            <p class="articles__date text">15 сентября 2021 г.</p>
+          </a>
         </div>
       </div>
     </section>
@@ -213,7 +125,7 @@
       </div>
     </div>
   </footer>
-  <!-- main js -->
-  <script src="./js/main.js"></script>
-</body>
-</html>
+    <!-- main js -->
+    <script src="./js/main.js"></script>
+  </body>
+  </html>

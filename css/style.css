@@ -503,6 +503,10 @@ a {
   text-align: center;
 }
 
+.news__block, .news__block img {
+  width: 100%;
+}
+
 .news__image {
   margin-top: 60px;
   overflow: hidden;
@@ -536,8 +540,8 @@ a {
   display: flex;
 }
 
-.news__block:first-child{
-  margin-right: 100px;
+.news__block:nth-child(2){
+  margin-left: 100px;
 }
 
 .news-block__btn:first-child object {
@@ -576,8 +580,8 @@ a {
     margin-bottom: 20px;
   }
 
-  .news__block:first-child {
-    margin-right: 0;
+  .news__block:nth-child(2) {
+    margin-left: 0;
   }
 }
 
